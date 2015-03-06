@@ -1,0 +1,17 @@
+body{
+	background: #eee;
+	font-family: Arial, sans-serif;
+}
+
+.button{
+	width: 100px;
+	height: 50px;
+	background: #ff0000;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.button p{
+	color: #ffffff;
+	text-align: center;
+}
