@@ -3,12 +3,22 @@ body{
 	font-family: Arial, sans-serif;
 }
 
+#content-container{
+	width: 300px;
+	margin: 0px auto;
+}
+
+#chart-wrapper{
+	width: 800px;
+	margin: 0px auto;
+}
+
 .button{
 	width: 100px;
 	height: 50px;
 	background: #ff0000;
 	float: left;
-	margin: 0 10px 0 0;
+	margin: 50px 10px 0 0;
 }
 
 .button p{

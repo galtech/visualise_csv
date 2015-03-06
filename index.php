@@ -1,7 +1,4 @@
-<?php
-
-
-?>
+<?php ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +9,10 @@
 </head>
 <body>
 
+<div id="content-container">
 <div class="button" id="uploadbutton"><p>Upload File</p></div>
 <div class="button" id="viewfilesbutton"><p>View Files</p></div>
-
+</div>
 
 
 </body>

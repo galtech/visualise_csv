@@ -11,10 +11,24 @@
 
 <?php
 
+$dir = "uploads/";
 
+// Open a directory, and read its contents
+if (is_dir($dir)){
+  if ($dh = opendir($dir)){
+    while (($file = readdir($dh)) !== false){
+		if($file == '.') echo '';
+		else if($file == '..') echo '';
+		else echo $file . ' | <a href="visualise.php?file='.$file. '">visualise</a><br/>';
+    }
+    closedir($dh);
+  }
+}
 
 
 ?>
+<br/><br/><br/>
+<a href="index.php">Back to home</a>
 
 </body>
 </html>

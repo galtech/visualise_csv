@@ -8,8 +8,8 @@ $filename = $target_path . basename( $_FILES['csvfile']['name']);
   $ext = substr($filename, strrpos($filename, '.') + 1);
   $mimes = array('application/vnd.ms-excel','text/plain','text/csv','text/tsv');
   
-  if (($ext == "csv") && in_array($_FILES["csvfile"]["type"],$mimes) && 
-    ($_FILES["csvfile"]["size"] < 1000000)) {
+if (($ext == "csv") && in_array($_FILES["csvfile"]["type"],$mimes)){
+	if($_FILES["csvfile"]["size"] < 1000000){
 		if(move_uploaded_file($_FILES['csvfile']['tmp_name'], $filename)) {
 			echo "The file ".  basename( $_FILES['csvfile']['name'])." has been uploaded";
 			header("Location:index.php",5000);
@@ -18,8 +18,12 @@ $filename = $target_path . basename( $_FILES['csvfile']['name']);
 			header("Location:index.php",5000);
 		}
 	}else{
-		echo "Either the file was too big or it was the wrong type";
+		echo "The file exceeds the max allowed file size. Please try again";
 		header("Location:index.php",5000);
 	}
+}else{
+	echo "The file is not of the correct type. Please ensure you are uploading a CSV file.";
+	header("Location:index.php",5000);
+}
 	
 ?>
